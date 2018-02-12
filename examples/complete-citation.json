@@ -1,0 +1,17 @@
+{
+  "@context": "https://w3id.org/oc/corpus/context.json",
+  "iri": "gci:1-5",
+  "a": "citation_relationship",
+  "label": "citation 1-5 [ci/1-5]",
+  "citing_document": "gbr:1",
+  "cited_document": "gbr:5",
+  "citation_creation_date": { "value": "2015", "a": "year" },
+  "citation_time_span": "P5Y",
+  "identifier": {
+    "iri": "gid:1",
+    "a": "unique_identifier",
+    "id": "1-5",
+    "type": "oci",
+    "label": "identifier ci-1-5 [id/ci-1-5]"
+  }
+}
