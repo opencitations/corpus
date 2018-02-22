@@ -1,6 +1,6 @@
 {
   "@context": {
-    
+
     "gocc": "https://w3id.org/oc/corpus/",
     "gprov": "https://w3id.org/oc/corpus/prov/",
     "gar": "https://w3id.org/oc/corpus/ar/",
