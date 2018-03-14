@@ -128,7 +128,7 @@
     "byte": { "@id": "dcat:byteSize", "@type": "xsd:decimal" },
     "citation_creation_date": "cito:hasCitationCreationDate",
     "citation_time_span": { "@id": "cito:hasCitationTimeSpan", "@type": "xsd:duration" },
-    "date": "prism:publicationDate",
+    "date": { "@id": "prism:publicationDate", "@type": "xsd:gYear" },
     "description": "dcterms:description",
     "edition": "prism:edition",
     "fname": "foaf:familyName",
