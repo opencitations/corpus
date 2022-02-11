@@ -5,26 +5,35 @@
     "gar": "https://w3id.org/oc/corpus/ar/",
     "gbe": "https://w3id.org/oc/corpus/be/",
     "gbr": "https://w3id.org/oc/corpus/br/",
+    "gca": "https://w3id.org/oc/corpus/ca/",
     "gci": "https://w3id.org/oc/virtual/ci/",
+    "gcp": "https://w3id.org/oc/corpus/ci/",
     "gcr": "https://w3id.org/oc/corpus/cr/",
+    "gde": "https://w3id.org/oc/corpus/de/",
     "gdi": "https://w3id.org/oc/corpus/di/",
     "gid": "https://w3id.org/oc/corpus/id/",
+    "gpl": "https://w3id.org/oc/corpus/pl/",
     "gpa": "https://w3id.org/oc/corpus/prov/pa/",
     "gra": "https://w3id.org/oc/corpus/ra/",
     "gre": "https://w3id.org/oc/corpus/re/",
+    "grp": "https://w3id.org/oc/corpus/rp/",
     "application": "https://w3id.org/spar/mediatype/application/",
     "biro": "http://purl.org/spar/biro/",
+    "co": "http://purl.org/co/",
     "c4o": "http://purl.org/spar/c4o/",
     "cito": "http://purl.org/spar/cito/",
     "datacite": "http://purl.org/spar/datacite/",
     "dbr": "http://dbpedia.org/resource/",
     "dcat": "http://www.w3.org/ns/dcat#",
     "dcterms": "http://purl.org/dc/terms/",
+    "deo": "http://purl.org/spar/deo/",
     "doco": "http://purl.org/spar/doco/",
     "fabio": "http://purl.org/spar/fabio/",
     "foaf": "http://xmlns.com/foaf/0.1/",
+    "fr": "http://purl.org/spar/fr/",
     "frbr": "http://purl.org/vocab/frbr/core#",
     "literal": "http://www.essepuntato.it/2010/06/literalreification/",
+    "oa": "http://www.w3.org/ns/oa#",
     "oco": "https://w3id.org/oc/ontology/",
     "prism": "http://prismstandard.org/namespaces/basic/2.0/",
     "pro": "http://purl.org/spar/pro/",
@@ -46,6 +55,8 @@
     "book_part": "doco:Part",
     "book_series": "fabio:BookSeries",
     "book_set": "fabio:BookSet",
+    "caption": "deo:Caption",
+    "reference_annotation": "oa:Annotation",
     "citation_relationship": "cito:Citation",
     "collection": "fabio:ExpressionCollection",
     "creation": "prov:Create",
@@ -53,12 +64,15 @@
     "curatorial_role": "prov:Association",
     "dataset": "fabio:DataFile",
     "digital_format": "fabio:DigitalManifestation",
+    "discourse_element": "deo:DiscourseElement",
     "distant_citation": "cito:DistantCitation",
     "document": "fabio:Expression",
     "entry": "biro:BibliographicReference",
     "generic_format": "fabio:Manifestation",
+    "footnote": "doco:Footnote",
     "funder_self_citation": "cito:FunderSelfCitation",
     "inbook": "fabio:BookChapter",
+    "reference_pointer": "c4o:InTextReferencePointer",
     "journal_self_citation": "cito:JournalSelfCitation",
     "journal_cartel_citation": "cito:JournalCartelCitation",
     "inproceedings": "fabio:ProceedingsPaper",
@@ -66,26 +80,43 @@
     "metadata_snapshot": "prov:Entity",
     "occ_dataset": "dcat:Dataset",
     "occ_distribution": "dcat:Distribution",
+    "paragraph": "doco:Paragraph",
     "patent": "fabio:PatentDocument",
+    "peer_review": "fr:ReviewVersion",
     "periodical_issue": "fabio:JournalIssue",
     "periodical_volume": "fabio:JournalVolume",
     "periodical_journal": "fabio:Journal",
     "print_format": "fabio:PrintObject",
     "proceedings": "fabio:AcademicProceedings",
+    "proceedings_series": "fabio:Series",
     "provenance_agent": "prov:Agent",
     "reference_book": "fabio:ReferenceBook",
     "reference_entry": "fabio:ReferenceEntry",
     "review": "fabio:ReviewArticle",
     "role": "pro:RoleInTime",
     "self_citation": "cito:SelfCitation",
+    "section": "doco:Section",
+    "section_title": "doco:SectionTitle",
+    "sentence": "doco:Sentence",
     "series": "fabio:Series",
+    "pointer_list": "c4o:SingleLocationPointerList",
     "standard": "fabio:SpecificationDocument",
     "techreport": "fabio:ReportDocument",
+    "table": "doco:Table",
+    "text_chunk": "doco:TextChunk",
     "thesis": "fabio:Thesis",
-    "web": "fabio:WebContent",
+    "web_content": "fabio:WebContent",
     "unpublished": "fabio:Preprint",
     "unique_identifier": "datacite:Identifier",
     "modification": "prov:Modify",
+    "annotation_body": {
+      "@id": "oa:hasBody",
+      "@type": "@vocab"
+    },
+    "annotation": {
+      "@id": "oa:hasTarget",
+      "@type": "@vocab"
+    },
     "attributed_to": {
       "@id": "prov:wasAttributedTo",
       "@type": "@vocab"
@@ -94,12 +125,20 @@
       "@id": "cito:cites",
       "@type": "@vocab"
     },
+    "citation_characterisation": {
+      "@id": "cito:hasCitationCharacterisation",
+      "@type": "@vocab"
+    },
     "citing_document": {
       "@id": "cito:hasCitingEntity",
       "@type": "@vocab"
     },
     "cited_document": {
       "@id": "cito:hasCitedEntity",
+      "@type": "@vocab"
+    },
+    "context_of": {
+      "@id": "c4o:isContextOf",
       "@type": "@vocab"
     },
     "contributor": {
@@ -112,6 +151,10 @@
     },
     "curatorial_role_type": {
       "@id": "prov:hadRole",
+      "@type": "@vocab"
+    },
+    "denotes": {
+      "@id": "c4o:denotes",
       "@type": "@vocab"
     },
     "derived_from": {
@@ -128,6 +171,10 @@
     },
     "download": {
       "@id": "dcat:downloadURL",
+      "@type": "@vocab"
+    },
+    "element": {
+      "@id": "co:element",
       "@type": "@vocab"
     },
     "endpoint": {
@@ -175,6 +222,10 @@
       "@type": "@vocab"
     },
     "reference": {
+      "@id": "frbr:part",
+      "@type": "@vocab"
+    },
+    "part": {
       "@id": "frbr:part",
       "@type": "@vocab"
     },
@@ -276,6 +327,7 @@
     "ean13": "datacite:ean13",
     "editor": "pro:editor",
     "eissn": "datacite:eissn",
+    "extends": "cito:extends",
     "fundref": "datacite:fundref",
     "handle": "datacite:handle",
     "html": "text:html",
@@ -320,6 +372,8 @@
     "urn": "datacite:urn",
     "viaf": "datacite:viaf",
     "xhtml": "application:xhtml+xml",
+    "xpath": "datacite:local-resource-identifier-scheme",
+    "xmlid": "datacite:local-resource-identifier-scheme",
     "year": "xsd:gYear",
     "year_month": "xsd:gYearMonth",
     "year_month_day": "xsd:date"
