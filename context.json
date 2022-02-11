@@ -1,6 +1,5 @@
 {
   "@context": {
-
     "gocc": "https://w3id.org/oc/corpus/",
     "gprov": "https://w3id.org/oc/corpus/prov/",
     "gar": "https://w3id.org/oc/corpus/ar/",
@@ -13,7 +12,6 @@
     "gpa": "https://w3id.org/oc/corpus/prov/pa/",
     "gra": "https://w3id.org/oc/corpus/ra/",
     "gre": "https://w3id.org/oc/corpus/re/",
-    
     "application": "https://w3id.org/spar/mediatype/application/",
     "biro": "http://purl.org/spar/biro/",
     "c4o": "http://purl.org/spar/c4o/",
@@ -36,11 +34,9 @@
     "text": "https://w3id.org/spar/mediatype/text/",
     "void": "http://rdfs.org/ns/void#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
-    
     "iri": "@id",
     "a": "@type",
     "value": "@value",
-
     "affiliation_self_citation": "cito:AffiliationSelfCitation",
     "agent": "foaf:Agent",
     "author_network_self_citation": "cito:AuthorNetworkSelfCitation",
@@ -90,65 +86,182 @@
     "unpublished": "fabio:Preprint",
     "unique_identifier": "datacite:Identifier",
     "modification": "prov:Modify",
-
-    "attributed_to": { "@id": "prov:wasAttributedTo", "@type": "@vocab" },
-    "citation": { "@id": "cito:cites", "@type": "@vocab" },
-    "citing_document": { "@id": "cito:hasCitingEntity", "@type": "@vocab" },
-    "cited_document": { "@id": "cito:hasCitedEntity", "@type": "@vocab" },
-    "contributor": { "@id": "pro:isDocumentContextFor", "@type": "@vocab" },
-    "crossref": { "@id": "biro:references", "@type": "@vocab"},
-    "curatorial_role_type": { "@id": "prov:hadRole" , "@type": "@vocab" },
-    "derived_from": { "@id": "prov:wasDerivedFrom", "@type": "@vocab" },
-    "distribution": { "@id": "dcat:distribution", "@type": "@vocab" },
-    "document_url": { "@id": "frbr:exemplar", "@type": "@vocab" },
-    "download": { "@id": "dcat:downloadURL", "@type": "@vocab" },
-    "endpoint": { "@id": "void:sparqlEndpoint", "@type": "@vocab" },
-    "file_type": { "@id": "dcat:mediaType", "@type": "@vocab" },
-    "format": { "@id": "frbr:embodiment", "@type": "@vocab" },
-    "generated_by": { "@id": "prov:wasGeneratedBy", "@type": "@vocab" },
-    "held_by": { "@id": "prov:agent" , "@type": "@vocab" },
-    "identifier": { "@id": "datacite:hasIdentifier", "@type": "@vocab" },
-    "invalidated_by": { "@id": "prov:wasInvalidatedBy", "@type": "@vocab" },
-    "involved": { "@id": "prov:qualifiedAssociation", "@type": "@vocab" },
-    "license": { "@id": "dcterms:license", "@type": "@vocab" },
-    "mime_type": { "@id": "dcterms:format", "@type": "@vocab" },
-    "next": { "@id": "oco:hasNext", "@type": "@vocab" },
-    "reference": { "@id": "frbr:part", "@type": "@vocab" },
-    "part_of": { "@id": "frbr:partOf", "@type": "@vocab" },
-    "related": { "@id": "dcterms:relation", "@type": "@vocab" },
-    "role_of": { "@id": "pro:isHeldBy", "@type": "@vocab" },
-    "role_type": { "@id": "pro:withRole", "@type": "@vocab" },
-    "snapshot_of": { "@id": "prov:specializationOf", "@type": "@vocab" },
-    "source": { "@id": "prov:hadPrimarySource", "@type": "@vocab" },
-    "subject": { "@id": "dcat:theme", "@type": "@vocab" },
-    "subset": { "@id": "void:subset", "@type": "@vocab" },
-    "type": { "@id": "datacite:usesIdentifierScheme", "@type": "@vocab" },
-    "webpage": { "@id": "dcat:landingPage", "@type": "@vocab" },
-
-    "byte": { "@id": "dcat:byteSize", "@type": "xsd:decimal" },
+    "attributed_to": {
+      "@id": "prov:wasAttributedTo",
+      "@type": "@vocab"
+    },
+    "citation": {
+      "@id": "cito:cites",
+      "@type": "@vocab"
+    },
+    "citing_document": {
+      "@id": "cito:hasCitingEntity",
+      "@type": "@vocab"
+    },
+    "cited_document": {
+      "@id": "cito:hasCitedEntity",
+      "@type": "@vocab"
+    },
+    "contributor": {
+      "@id": "pro:isDocumentContextFor",
+      "@type": "@vocab"
+    },
+    "crossref": {
+      "@id": "biro:references",
+      "@type": "@vocab"
+    },
+    "curatorial_role_type": {
+      "@id": "prov:hadRole",
+      "@type": "@vocab"
+    },
+    "derived_from": {
+      "@id": "prov:wasDerivedFrom",
+      "@type": "@vocab"
+    },
+    "distribution": {
+      "@id": "dcat:distribution",
+      "@type": "@vocab"
+    },
+    "document_url": {
+      "@id": "frbr:exemplar",
+      "@type": "@vocab"
+    },
+    "download": {
+      "@id": "dcat:downloadURL",
+      "@type": "@vocab"
+    },
+    "endpoint": {
+      "@id": "void:sparqlEndpoint",
+      "@type": "@vocab"
+    },
+    "file_type": {
+      "@id": "dcat:mediaType",
+      "@type": "@vocab"
+    },
+    "format": {
+      "@id": "frbr:embodiment",
+      "@type": "@vocab"
+    },
+    "generated_by": {
+      "@id": "prov:wasGeneratedBy",
+      "@type": "@vocab"
+    },
+    "held_by": {
+      "@id": "prov:agent",
+      "@type": "@vocab"
+    },
+    "identifier": {
+      "@id": "datacite:hasIdentifier",
+      "@type": "@vocab"
+    },
+    "invalidated_by": {
+      "@id": "prov:wasInvalidatedBy",
+      "@type": "@vocab"
+    },
+    "involved": {
+      "@id": "prov:qualifiedAssociation",
+      "@type": "@vocab"
+    },
+    "license": {
+      "@id": "dcterms:license",
+      "@type": "@vocab"
+    },
+    "mime_type": {
+      "@id": "dcterms:format",
+      "@type": "@vocab"
+    },
+    "next": {
+      "@id": "oco:hasNext",
+      "@type": "@vocab"
+    },
+    "reference": {
+      "@id": "frbr:part",
+      "@type": "@vocab"
+    },
+    "part_of": {
+      "@id": "frbr:partOf",
+      "@type": "@vocab"
+    },
+    "related": {
+      "@id": "dcterms:relation",
+      "@type": "@vocab"
+    },
+    "role_of": {
+      "@id": "pro:isHeldBy",
+      "@type": "@vocab"
+    },
+    "role_type": {
+      "@id": "pro:withRole",
+      "@type": "@vocab"
+    },
+    "snapshot_of": {
+      "@id": "prov:specializationOf",
+      "@type": "@vocab"
+    },
+    "source": {
+      "@id": "prov:hadPrimarySource",
+      "@type": "@vocab"
+    },
+    "subject": {
+      "@id": "dcat:theme",
+      "@type": "@vocab"
+    },
+    "subset": {
+      "@id": "void:subset",
+      "@type": "@vocab"
+    },
+    "type": {
+      "@id": "datacite:usesIdentifierScheme",
+      "@type": "@vocab"
+    },
+    "webpage": {
+      "@id": "dcat:landingPage",
+      "@type": "@vocab"
+    },
+    "byte": {
+      "@id": "dcat:byteSize",
+      "@type": "xsd:decimal"
+    },
     "citation_creation_date": "cito:hasCitationCreationDate",
-    "citation_time_span": { "@id": "cito:hasCitationTimeSpan", "@type": "xsd:duration" },
-    "date": { "@id": "prism:publicationDate", "@type": "xsd:gYear" },
+    "citation_time_span": {
+      "@id": "cito:hasCitationTimeSpan",
+      "@type": "xsd:duration"
+    },
+    "date": {
+      "@id": "prism:publicationDate",
+      "@type": "xsd:gYear"
+    },
     "description": "dcterms:description",
     "edition": "prism:edition",
     "fname": "foaf:familyName",
     "fpage": "prism:startingPage",
-    "generated": { "@id": "prov:generatedAtTime", "@type": "xsd:dateTime" },
+    "generated": {
+      "@id": "prov:generatedAtTime",
+      "@type": "xsd:dateTime"
+    },
     "gname": "foaf:givenName",
     "id": "literal:hasLiteralValue",
-    "invalidated": { "@id": "prov:invalidatedAtTime", "@type": "xsd:dateTime" },
+    "invalidated": {
+      "@id": "prov:invalidatedAtTime",
+      "@type": "xsd:dateTime"
+    },
     "keyword": "dcat:keyword",
     "label": "rdfs:label",
     "lpage": "prism:endingPage",
-    "mod_date": { "@id": "dcterms:modified", "@type": "xsd:dateTime" },
+    "mod_date": {
+      "@id": "dcterms:modified",
+      "@type": "xsd:dateTime"
+    },
     "name": "foaf:name",
     "number": "fabio:hasSequenceIdentifier",
-    "pub_date": { "@id": "dcterms:issued", "@type": "xsd:dateTime" },
+    "pub_date": {
+      "@id": "dcterms:issued",
+      "@type": "xsd:dateTime"
+    },
     "content": "c4o:hasContent",
     "subtitle": "fabio:hasSubtitle",
     "title": "dcterms:title",
     "update_action": "oco:hasUpdateQuery",
-    
     "ark": "datacite:ark",
     "arxiv": "datacite:arxiv",
     "author": "pro:author",
@@ -207,7 +320,6 @@
     "urn": "datacite:urn",
     "viaf": "datacite:viaf",
     "xhtml": "application:xhtml+xml",
-
     "year": "xsd:gYear",
     "year_month": "xsd:gYearMonth",
     "year_month_day": "xsd:date"
